@@ -1,19 +1,19 @@
 const path = require('path');
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'Musings',
+  tagline: "Let's create something together",
   url: 'https://jai-the-seeker.github.io',
   baseUrl: '/rosh/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/symbol.png',
   organizationName: 'jai-the-seeker', // Usually your GitHub org/user name.
   projectName: 'rosh', // Usually your repo name.
   plugins: [path.resolve(__dirname, './node_modules/docusaurus-lunr-search/')],
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Musings',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/symbol.png',
       },
       links: [
         {
@@ -77,7 +77,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} jai-the-seeker.`,
     },
   },
   presets: [
@@ -92,7 +92,7 @@ module.exports = {
           //editUrl:
           //  'https://github.com/facebook/docusaurus/edit/master/website/',
         },
-        
+
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
