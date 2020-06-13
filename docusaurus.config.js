@@ -19,7 +19,7 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Red Hunters',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
@@ -86,7 +86,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
+          homePageId: 'network_recon/proxy',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           //editUrl:
