@@ -24,6 +24,9 @@
 
 module.exports = {
   someSidebar: {
+    Hunting:[
+      'field-manual',
+    ],
     'Network Recon': [
       'network_recon/proxy',
       'network_recon/SMTP'

@@ -86,12 +86,13 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'network_recon/proxy',
+          homePageId: 'field-manual',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           //editUrl:
           //  'https://github.com/facebook/docusaurus/edit/master/website/',
         },
+        
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
