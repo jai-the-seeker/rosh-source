@@ -1,4 +1,3 @@
-# Bandit
 
 ## level 0
 ```
