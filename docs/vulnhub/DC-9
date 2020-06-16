@@ -1,0 +1,11 @@
+Let's find the IP address of the DC-9 machine
+```
+$ arp-scan --interface=eth1 10.10.10.0/24
+
+Interface: eth1, type: EN10MB, MAC: 08:00:27:5a:bb:1d, IPv4: 10.10.10.106
+Starting arp-scan 1.9.7 with 256 hosts (https://github.com/royhills/arp-scan)
+10.10.10.1	0a:00:27:00:00:05	(Unknown: locally administered)
+10.10.10.100	08:00:27:6d:d8:39	PCS Systemtechnik GmbH
+10.10.10.109	08:00:27:2e:3b:e6	PCS Systemtechnik GmbH
+```
+The `arp-scan` reult shows the IP address of DC-9 machine as `10.10.10.109`
