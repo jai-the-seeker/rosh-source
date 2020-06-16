@@ -4,7 +4,7 @@
 ```
 $ ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
-Check disk usage
+__Check disk usage__
 ```
 du -h /home/mandeep/test 
 
