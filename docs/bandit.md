@@ -27,3 +27,9 @@ drwxr-xr-x 41 root    root    4096 May  7 20:14 ..
 bandit1@bandit:~$ cat ./-
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 ```
+## level 2
+__spaces in the filename__
+```
+bandit2@bandit:~$ cat spaces\ in\ this\ filename
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+```
