@@ -1,6 +1,6 @@
 # Bandit
 
-## level 1
+## level 0
 ```
 $ ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
@@ -12,7 +12,7 @@ Output:
 44K    /home/mandeep/test/data
 2.0M    /home/mandeep/test/system design
 ```
-## level 2
+## level 1
 __How to open `-` filename__
 This type of approach has a lot of misunderstanding because using `-` as an argument refers to `STDIN/STDOUT` i.e `dev/stdin` or `dev/stdout`.So if you want to open this type of file you have to specify the full location of the file such as `./-` .For eg. , if you want to see what is in that file use `cat ./-`
 ```
