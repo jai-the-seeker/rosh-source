@@ -12,16 +12,6 @@
 
 
 
-/*module.exports = {
-  someSidebar: {
-    //NetworkRecon: ['network_recon/proxy', 'network_recon/SMTP', 'doc3'],
-    //Scripts: ['scripts/bash_scripts', 'scripts/python_scripts'],
-    //Utilities: ['utilities/curl'],
-    Web: ['mdx'],
-  },
-};
-*/
-
 module.exports = {
   someSidebar: {
     Hunting:[
@@ -54,7 +44,9 @@ module.exports = {
       'password_cracking',
       'persistence',
     ],
-    
+    OverTheWire: [
+      'bandit',      
+    ],
 
   },
 };
