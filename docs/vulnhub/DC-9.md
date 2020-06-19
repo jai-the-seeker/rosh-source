@@ -29,3 +29,4 @@ Sleep for sometime and start the port scan for all the ports
 ```
 root@kali:~# sleep 300; nmap -p- -oA dc-9-allports 10.10.10.109
 ```
+
