@@ -2,12 +2,6 @@
 title: Kill Sessions and Cookies
 author: Jai
 ---
-// Add to the top of the file below the front matter.
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-...
-
-<img alt="Docusaurus with Keytar" src={useBaseUrl('img/logo1.svg')} />
 
 Refs:
 * <https://www.youtube.com/watch?v=9n7ZohSRKrQ>
@@ -18,3 +12,5 @@ Let us create a php file for starting the session
   session_start();
 ?>
 ```
+
+![Docusaurus with Keytar](/img/logo1.svg)
