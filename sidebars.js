@@ -44,6 +44,9 @@ module.exports = {
       'hunting/password_cracking',
       'hunting/persistence',
     ],
+    Vulnhub: [
+      'hunting/vulnhub/DC-9',      
+    ],
     OverTheWire: [
       'hunting/bandit',      
     ],
