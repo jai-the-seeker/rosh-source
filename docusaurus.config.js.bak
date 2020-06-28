@@ -42,30 +42,46 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Videos',
+          title: 'Docs',
           items: [
             {
-              label: 'Youtube',
-              //href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },            
+              label: 'Style Guide',
+              to: 'docs/',
+            },
+            {
+              label: 'Second Doc',
+              to: 'docs/doc2/',
+            },
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Github',
-              //href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },            
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/docusaurus',
+            },
           ],
         },
         {
-          title: 'Social Media',
+          title: 'More',
           items: [
             {
-              label: 'Twitter',
+              label: 'Blog',
+              to: 'blog',
+            },
+            {
+              label: 'GitHub',
               //href: 'https://github.com/facebook/docusaurus',
-            },            
+            },
           ],
         },
       ],

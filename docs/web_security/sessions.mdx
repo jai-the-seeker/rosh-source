@@ -1,0 +1,78 @@
+---
+title: Kill Sessions and Cookies
+author: Jai
+---
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Refs:
+* <https://www.youtube.com/watch?v=9n7ZohSRKrQ>
+
+## In the begining
+Let us create a php file for starting the session
+```php
+<?php
+  session_start();
+?>
+```
+`session_start()` creates a session or resumes the current one based on a session identifier passed 
+via a GET or POST request, or passed via a cookie.
+
+Once we open the file in the browser, we will see that a cookie named `PHPSESSID` is created
+
+<img alt="Figure 01" src={useBaseUrl('img/web_security/sessions/pssid.jpg')} />
+
+A session file is created in our server in the /tmp directory
+```bash
+# ls /tmp 
+sess_ca9f1b3ed05ab874e5d47ab522867ee3
+```
+## Capture traffic in Burpsuite
+
+The first time we visit the webpage, raw request is given below
+```
+GET /sess.php HTTP/1.1
+Host: 10.10.10.105:5000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: close
+Upgrade-Insecure-Requests: 1
+```
+When we visit the webpage again, we see that `PHPSESSID` cookie also travels along with the 
+request
+
+```
+GET /sess.php HTTP/1.1
+Host: 10.10.10.105:5000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: close
+Cookie: PHPSESSID=ca9f1b3ed05ab874e5d47ab522867ee3
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+```
+## Play with Sessions
+Let us set a few session variables, these are set with the PHP global variable $_SESSION.
+These variables can be accessed during lifetime of a session.
+
+```php
+<?php
+  session_start();
+  if (isset($_SESSION['user'])) {
+    echo "Welcome :". $_SESSION['user']."<br>";
+  }
+  else {
+    $_SESSION['user'] = "burp";
+  }
+?>
+```
+Now, when the user visits the webpage, an entry is made inside the sessions file in the server
+```
+$ cat sess_ca9f1b3ed05ab874e5d47ab522867ee3 
+user|s:4:"burp";
+```
+The second and subsequent times, the user visits the webpage, "Welcome :burp" is displayed on the browser.
+

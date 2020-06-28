@@ -13,39 +13,47 @@
 
 
 module.exports = {
-  someSidebar: {
+  huntingSidebar: {
     Hunting:[
-      'field-manual',
+      'hunting/field-manual',
     ],
     'Network Recon': [
-      'network_recon/proxy',
-      'network_recon/SMTP'
+      'hunting/network_recon/proxy',
+      'hunting/network_recon/SMTP'
     ],
     Scripts: [
-      'scripts/bash_scripts', 
-      'scripts/python_scripts'
+      'hunting/scripts/bash_scripts', 
+      'hunting/scripts/python_scripts'
     ],
     Utilities: [
-      'utilities/curl',
-      'utilities/nc',
-      'utilities/nmap',
-      'utilities/ssh',
-      'utilities/tshark',
+      'hunting/utilities/curl',
+      'hunting/utilities/nc',
+      'hunting/utilities/nmap',
+      'hunting/utilities/ssh',
+      'hunting/utilities/tshark',
     ],
     Web: [
-      'web/sql_injection',
-      'web/web_recon',
+      'hunting/web/sql_injection',
+      'hunting/web/web_recon',
     ],
     Misc: [
-      'forensics',
-      'linux_deb_backdoor',
-      'linux_priv_esc',
-      'MITRE',
-      'password_cracking',
-      'persistence',
+      'hunting/forensics',
+      'hunting/linux_deb_backdoor',
+      'hunting/linux_priv_esc',
+      'hunting/MITRE',
+      'hunting/password_cracking',
+      'hunting/persistence',
     ],
     OverTheWire: [
-      'bandit',      
+      'hunting/bandit',      
+    ],
+
+  },
+
+  web_securitySidebar: {
+    Sessions:[
+      'web_security/sessions',
+      
     ],
 
   },
