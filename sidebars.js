@@ -55,8 +55,10 @@ module.exports = {
 
   web_securitySidebar: {
     Sessions:[
-      'web_security/sessions',
-      
+      'web_security/sessions',      
+    ],
+    DVWA:[
+      'web_security/dvwa/bruteforcing',      
     ],
 
   },
