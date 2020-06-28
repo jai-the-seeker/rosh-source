@@ -82,12 +82,14 @@ curl -H 'Authorization: Token 123123123' 192.186.248.3
 
 ## Hydra
 ### http-get
+This is the basic example
 ```sh
 hydra -L unix_users.txt -P passwords.txt 192.148.69.3 http-get /
 ```
 Options : `-l` single LOGIN name or `-L` FILE having list of LOGIN names,
 `-p` single PASSWORD  or `-P` FILE having list of passwords,
 `-t` Number of threads per target (default: 16)
+
 ### http-post-form
 Ref
 * <https://redteamtutorials.com/2018/10/25/hydra-brute-force-https/>
