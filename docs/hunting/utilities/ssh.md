@@ -25,3 +25,17 @@ Now, `start` the service and check its status
 service ssh start
 service ssh status
 ```
+
+## Generate SSH key-pair
+Let us generate a ssh key-pair in the windows client
+```
+ssh-keygen -t rsa -b 4096 -f %USERPROFILE%/.ssh/ubuntu_rsa
+```
+Now, copy the public file into the remote host
+```
+scp %USERPROFILE%/.ssh/ubuntu_rsa.pub student@10.10.10.105:~
+```
+You can also change it permissions
+```
+chmod 600 ubuntu_rsa.pub
+```
