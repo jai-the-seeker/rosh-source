@@ -33,7 +33,7 @@ ssh-keygen -t rsa -b 4096 -f %USERPROFILE%/.ssh/ubuntu_rsa
 ```
 Now, copy the public file into the remote host
 ```
-scp %USERPROFILE%/.ssh/ubuntu_rsa.pub student@10.10.10.105:~
+scp %USERPROFILE%/.ssh/ubuntu_rsa.pub student@10.10.10.105:~/.ssh/
 ```
 You can also change it permissions
 ```
