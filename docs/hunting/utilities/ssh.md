@@ -47,3 +47,15 @@ Now, you can test your connection
 ```
 scp %USERPROFILE%/.ssh/ubuntu_rsa.pub student@10.10.10.105
 ```
+## VS Code SSHSetup
+Refs:
+* <https://www.youtube.com/watch?v=lKXMyln_5q4>
+
+VS Code SSH configuration
+```
+Host ubuntu_remote
+    HostName 10.10.10.105
+    User student
+    IdentityFile C:\Users\user\.ssh\ubuntu_rsa
+```
+
