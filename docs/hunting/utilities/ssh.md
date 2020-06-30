@@ -33,9 +33,17 @@ ssh-keygen -t rsa -b 4096 -f %USERPROFILE%/.ssh/ubuntu_rsa
 ```
 Now, copy the public file into the remote host
 ```
-scp %USERPROFILE%/.ssh/ubuntu_rsa.pub student@10.10.10.105:~/.ssh/
+$ scp %USERPROFILE%/.ssh/ubuntu_rsa.pub student@10.10.10.105:~
 ```
-You can also change it permissions
+On the remote host, perform following changes
 ```
-chmod 600 ubuntu_rsa.pub
+# append the contents of the public key to end of the authorized_keys
+$ cat ubuntu_rsa.pub >>~/.ssh/authorized_keys
+# you can change the permissions as a good practice
+$ chmod 600 authorized_keys
+$ rm ~/ubuntu_rsa.pub
+```
+Now, you can test your connection
+```
+scp %USERPROFILE%/.ssh/ubuntu_rsa.pub student@10.10.10.105
 ```
