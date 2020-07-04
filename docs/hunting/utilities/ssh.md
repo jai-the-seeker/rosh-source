@@ -40,7 +40,7 @@ On the remote host, perform following changes
 # append the contents of the public key to end of the authorized_keys
 $ cat ubuntu_rsa.pub >>~/.ssh/authorized_keys
 # you can change the permissions as a good practice
-$ chmod 600 authorized_keys
+$ chmod 600 ~/.ssh/authorized_keys
 $ rm ~/ubuntu_rsa.pub
 ```
 Now, you can test your connection
