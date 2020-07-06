@@ -1,6 +1,4 @@
 Refs :
-* <https://www.exploit-db.com/exploits/48116>
-* <https://github.com/Arno0x/ShellcodeWrapper/blob/master/templates/encryptedShellcodeWrapper.cpp>
 * <https://gist.github.com/securitytube/5318838>
 
 ## Shellcode in Linux
@@ -61,6 +59,10 @@ $ gcc shell_malloc.c -o shell -z execstack -m32
 $ ./shell
 ```
 ## Shellcode in Windows
+This will open up calc.exe program
+Refs:
+* <https://www.exploit-db.com/exploits/48116>
+* <https://github.com/Arno0x/ShellcodeWrapper/blob/master/templates/encryptedShellcodeWrapper.cpp>
 ```c
 #include<windows.h>
 #include<stdio.h>
