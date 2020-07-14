@@ -51,3 +51,9 @@ The built file will be named work.deb so we will want to change that to xbomb.de
 dpkg-deb: building package `xbomb' in `/tmp/evil/work.deb'.
 :/tmp/evil$ mv work.deb xbomb.deb
 ```
+Now, we can copy xbomb.deb to home folder and double click for installation
+
+In order to uninstall the .deb file
+```bash
+$ sudo dpkg -P xbomb
+```
