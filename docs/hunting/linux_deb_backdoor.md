@@ -20,7 +20,7 @@ $ dpkg -x xbomb_2.2b-1build1_amd64.deb work
 $ mkdir /tmp/evil/work/DEBIAN
 
 # Create a control file inside the DEBIAN directory
-:/tmpevil/work/DEBIAN$ cat control
+student@student:/tmpevil/work/DEBIAN$ cat control
 
 cat control
 Package: xbomb
@@ -38,7 +38,7 @@ Description: a text-based minesweeper
 ```
 In our DEBIAN directory, we’ll create a file named preinst that contains the following
 ```bash
-:/tmp/evil/work/DEBIAN# cat preinst
+student@student:/tmp/evil/work/DEBIAN# cat preinst
 #!/bin/sh
 
 echo "ran preinst of client at $(date)." >> /tmp/myntp.log
@@ -46,11 +46,11 @@ echo "ran preinst of client at $(date)." >> /tmp/myntp.log
 We’ll now make our pre-installation script executable and build our new package. 
 The built file will be named work.deb so we will want to change that to xbomb.deb
 ```bash
-:/tmp/evil/work/DEBIAN$ chmod 755 postinst
-:/tmp/evil/work/DEBIAN$ dpkg-deb --build /tmp/evil/work
+student@student:/tmp/evil/work/DEBIAN$ chmod 755 postinst
+student@student:/tmp/evil/work/DEBIAN$ dpkg-deb --build /tmp/evil/work
 dpkg-deb: building package `xbomb' in `/tmp/evil/work.deb'.
 
-:/tmp/evil$ mv work.deb xbomb.deb
+student@student:/tmp/evil$ mv work.deb xbomb.deb
 ```
 Now, we can copy xbomb.deb to home folder and double click for installation
 
