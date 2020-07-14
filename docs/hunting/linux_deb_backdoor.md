@@ -16,7 +16,7 @@ $ cd /tmp/evil/
 # Extract the contents of .deb package into work directory
 $ dpkg -x xbomb_2.2b-1build1_amd64.deb work
 
-# MakeDEBIAN directory inside work directory
+# Make DEBIAN directory inside work directory
 $ mkdir /tmp/evil/work/DEBIAN
 
 # Create a control file inside the DEBIAN directory
