@@ -41,7 +41,7 @@ In our DEBIAN directory, we’ll create a file named preinst that contains the f
 student@student:/tmp/evil/work/DEBIAN# cat preinst
 #!/bin/sh
 
-echo "ran preinst of client at $(date)." >> /tmp/myntp.log
+echo "ran preinst of client at $(date)." >> /tmp/my.log
 ```
 We’ll now make our pre-installation script executable and build our new package. 
 The built file will be named work.deb so we will want to change that to xbomb.deb
@@ -52,7 +52,11 @@ dpkg-deb: building package `xbomb' in `/tmp/evil/work.deb'.
 
 student@student:/tmp/evil$ mv work.deb xbomb.deb
 ```
-Now, we can copy xbomb.deb to home folder and double click for installation
+Now, we can copy xbomb.deb to home folder and double click for installation. In order to confirm that the preinstl script ran check /tmp/my.log file.
+```
+$ cat /tmp/my.log
+ran preinst client at Tue Jul 14 22:06:59 xxx xxxx.
+```
 
 In order to uninstall the .deb file
 ```bash
