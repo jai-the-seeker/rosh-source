@@ -41,7 +41,7 @@ In our DEBIAN directory, we’ll create a file named preinst that contains the f
 :/tmp/evil/work/DEBIAN# cat preinst
 #!/bin/sh
 
-echo "ran preinst of ntp client at $(date)." >> /tmp/myntp.log
+echo "ran preinst of client at $(date)." >> /tmp/myntp.log
 ```
 We’ll now make our pre-installation script executable and build our new package. 
 The built file will be named work.deb so we will want to change that to xbomb.deb
