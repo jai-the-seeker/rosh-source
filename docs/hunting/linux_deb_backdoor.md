@@ -49,6 +49,7 @@ The built file will be named work.deb so we will want to change that to xbomb.de
 :/tmp/evil/work/DEBIAN$ chmod 755 postinst
 :/tmp/evil/work/DEBIAN$ dpkg-deb --build /tmp/evil/work
 dpkg-deb: building package `xbomb' in `/tmp/evil/work.deb'.
+
 :/tmp/evil$ mv work.deb xbomb.deb
 ```
 Now, we can copy xbomb.deb to home folder and double click for installation
