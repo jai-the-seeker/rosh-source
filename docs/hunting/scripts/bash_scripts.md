@@ -15,6 +15,7 @@ sidebar_label: Bash Scripts
   * [`locate`](#locate)
   * [`netstat`](#netstat)
   * [`ps`](#ps)
+  * [`grep`](#grep)
   * [empty file](#empty-file)
 * [Basic Bash Commands and Constructs](#basic-bash-commands-and-constructs)
   * [Basic Expressions](#basic-expressions)
@@ -114,22 +115,27 @@ Refs:
 # Enumerate services running on the target machine
 ps -ef
 netstat -anlp
-```
-```sh
+
 # List out all connections
 netstat -a
+
 # List out only tcp connections
 netstat -at
+
 # Disable reverse dns lookup for faster output. By default, the netstat command tries to find out the hostname of each ip address in the # connection by doing a reverse dns lookup. This slows down the output.
 netstat -n
+
 # List out only listening connections
 netstat -l
+
 # Get process name/pid and user id. -p for process name/pid and -e for user
 # When using the -p option, netstat must be run with root privileges, otherwise it cannot detect the pids of processes running with root # privileges and most services like http and ftp often run with root privileges.
 sudo netstat -ltpe
+
 # All established connections from the server.
 netstat -natu | grep 'ESTABLISHED'
 netstat -natu | grep 'ESTABLISHED' | grep 61.177.142.158
+
 # Listening Connection
 netstat -an | grep 'LISTEN'
 netstat -tnl
@@ -146,6 +152,11 @@ ps aux
 # To view a full format listing run
 ps -ef
 ```
+## `grep`
+```sh
+grep -nr "db_user"
+```
+`-n` is to print line number and `-r` searches in the directory recursively
 ## empty file
 ```
 # -n tells echo not to output the trailing newline
