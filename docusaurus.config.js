@@ -1,21 +1,35 @@
-const path = require('path');
 module.exports = {
   title: 'Musings',
   tagline: "Let's create something together",
   url: 'https://jai-the-seeker.github.io',
   baseUrl: '/rosh/',
   favicon: 'img/symbol.png',
+  onBrokenLinks: 'ignore', 
   organizationName: 'jai-the-seeker', // Usually your GitHub org/user name.
-  projectName: 'rosh', // Usually your repo name.
-  plugins: [path.resolve(__dirname, './node_modules/docusaurus-lunr-search/')],
+  projectName: 'rosh', // Usually your repo name.  
   themeConfig: {
+    
+    colorMode: {
+      // "light" | "dark"
+      defaultMode: 'dark',
+
+      // Hides the switch in the navbar
+      // Useful if you want to support a single color mode
+      disableSwitch: true,
+
+      // Should we use the prefers-color-scheme media-query,
+      // using user system preferences, instead of the hardcoded defaultMode
+      respectPrefersColorScheme: false,
+    },
+    
+
     navbar: {
       title: 'Musings',
       logo: {
         alt: 'My Site Logo',
         src: 'img/symbol.png',
       },
-      links: [
+      items: [
         {
           to: 'docs/hunting/field-manual',
           //activeBaseRegex: 'hunting',
@@ -32,7 +46,7 @@ module.exports = {
         },
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          //href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
           position: 'right',
         },
@@ -43,30 +57,30 @@ module.exports = {
       links: [
         {
           title: 'Videos',
-          items: [
+          /*items: [
             {
               label: 'Youtube',
-              //href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: '' //'https://stackoverflow.com/questions/tagged/docusaurus',
             },            
-          ],
+          ],*/
         },
         {
           title: 'Community',
-          items: [
+          /*items: [
             {
               label: 'Github',
-              //href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: '' //'https://stackoverflow.com/questions/tagged/docusaurus',
             },            
-          ],
+          ],*/
         },
         {
           title: 'Social Media',
-          items: [
+          /*items: [
             {
               label: 'Twitter',
-              //href: 'https://github.com/facebook/docusaurus',
+              href: '' //'https://github.com/facebook/docusaurus',
             },            
-          ],
+          ],*/
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} jai-the-seeker.`,
